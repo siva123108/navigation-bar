@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00d1b2;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    #introDetails {
+      display: none;
+      margin-top: 10px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .project {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .details {
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #00d1b2;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #00b49e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hello! I'm a passionate developer eager to build amazing projects.</p>
+    <button onclick="toggleIntro()">Read More</button>
+    <div id="introDetails">
+      <p>I enjoy creating dynamic and responsive websites. I also love solving problems and continuously learning new technologies. Fun fact: I built my first website at 13!</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a full-stack web developer with a focus on user-centered design and clean code.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Node.js</li>
+      <li>Python, Java</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project">
+      <h3>Project 1: Portfolio Website</h3>
+      <button onclick="toggleDetails('project1')">View Details</button>
+      <div id="project1" class="details">
+        <p>This is a personal portfolio website built using HTML, CSS, and JS. <br>
+        <strong>Tech:</strong> HTML, CSS, JavaScript</p>
+        <a href="#" target="_blank">View Repository</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h3>Project 2: Weather App</h3>
+      <button onclick="toggleDetails('project2')">View Details</button>
+      <div id="project2" class="details">
+        <p>A simple weather app that shows real-time data using API.<br>
+        <strong>Tech:</strong> HTML, CSS, JavaScript, OpenWeatherMap API</p>
+        <a href="#" target="_blank">View Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: sivasankarsiva42673@gmail.com</p>
+    <p>Phone: 6302328925</p>
+  </section>
+
+  <script>
+    function toggleIntro() {
+      const intro = document.getElementById('introDetails');
+      intro.style.display = intro.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleDetails(id) {
+      const details = document.getElementById(id);
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
+
+
+
